@@ -226,9 +226,6 @@ def cal_link():
                             if flag:
                                 ud_link[i][j].add(temp)
 
-
-
-
     # 计算du链
     for i in range(num_block):
         for j in range(num_var):
