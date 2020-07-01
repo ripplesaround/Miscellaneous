@@ -112,3 +112,86 @@ OOP：规模较大
 
 
 编写OOP：首先从设计类开始，然后再往每个类中添加方法。识别类的简单规则是在分析问题的过程中寻找名词， 而方法对应着动词。
+
+
+
+类之间的关系
+
+- 依赖 uses-a
+- 聚合 has-a
+- 继承 is-a
+
+
+
+更改器方法（mutator method）与访问器方法（accessor method）
+
+对象是否被修改
+
+强烈建议将实例域标记为private
+
+隐式参数与显式参数，**this**
+
+<img src="%E5%8D%B7%20I/image-20200701171159024.png" alt="image-20200701171159024" style="zoom:50%;" />
+
+**不要编写返回引用<u>[可变对象](https://blog.csdn.net/bupa900318/article/details/80696785?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.compare&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.compare)</u>的访问器方法。**
+
+Override
+
+
+
+ Employee 类的方法可以访问 Employee 类 的任何一个对象的私有域
+
+一个方法可以访问<u>所属类</u>的所有对象的私有数据，
+
+
+
+final表示存储在变量中的对象引用不会再指示其他对象，但这个对象可以更改
+
+
+
+<img src="%E5%8D%B7%20I/image-20200701223426299.png" alt="image-20200701223426299" style="zoom:50%;" />
+
+
+
+[工厂方法](https://www.runoob.com/design-pattern/design-pattern-intro.html)
+
+
+
+<img src="%E5%8D%B7%20I/image-20200701224930219.png" alt="image-20200701224930219" style="zoom:50%;" />
+
+
+
+- 方法参数
+  - 按值调用 ->基本数据类型
+  - 按引用调用 ->对象引用
+
+
+
+<img src="%E5%8D%B7%20I/image-20200702000624751.png" alt="image-20200702000624751" style="zoom:50%;" />
+
+<img src="%E5%8D%B7%20I/image-20200702001143658.png" alt="image-20200702001143658" style="zoom:50%;" />
+
+<img src="%E5%8D%B7%20I/image-20200702001351085.png" alt="image-20200702001351085" style="zoom:50%;" />
+
+
+
+<img src="%E5%8D%B7%20I/image-20200702002129885.png" alt="image-20200702002129885" style="zoom:50%;" />
+
+如果使用静态方法就需要加 static
+
+
+
+### 类设计技巧
+
+1. 一定要保证数据私有，不要破坏封装性
+
+2. 一定要对数据初始化
+
+3. 不要在类中使用过多的基本类型
+
+   <img src="%E5%8D%B7%20I/image-20200702010939863.png" alt="image-20200702010939863" style="zoom:50%;" />
+
+4. 不是所有的域都需要独立的域访问器/更改器
+5. 将职责过多的类进行分解
+6. 类名和方法名要能够体现其职责
+7. 优先使用不可变的类
